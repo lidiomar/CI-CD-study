@@ -39,5 +39,5 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
       - name: Run unit tests
-        run: xcodebuild test -project ButtonTap.xcodeproj -scheme ButtonTap -destination"generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO 
+        run: xcodebuild test -project ButtonTap.xcodeproj -scheme ButtonTap -destination "plataform=iOS Simulator,OS=14.5,name=iPhone 12" CODE_SIGNING_REQUIRED=NO
       
