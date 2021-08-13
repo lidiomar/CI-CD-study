@@ -35,11 +35,15 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: List available Xcode versions
-        run: ls /Applications | grep Xcode
+        run: | 
+          ls /Applications | grep Xcode
       - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
+        run: | 
+          sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
       - name: List simulators
-        run: xcrun simctl list
+        run: | 
+          xcrun simctl list
       - name: Run unit tests
-        run: xcodebuild -project ButtonTap.xcodeproj -scheme ButtonTap -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4' test CODE_SIGNING_REQUIRED=NO
+        run: | 
+          xcodebuild -project ButtonTap.xcodeproj -scheme ButtonTap -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4' test CODE_SIGNING_REQUIRED=NO
       
