@@ -7,10 +7,10 @@ on:
 
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   Run_workspace_Tests:
     runs-on: macOS-latest
